@@ -34,6 +34,10 @@ public class Employee implements Serializable {
 		this.department = department;
 	}
 	
-	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return getLastName() + " " + getFirstName();
+	}
 
 }

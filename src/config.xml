@@ -18,7 +18,11 @@
 	</bean>
 	
 	<bean id = "employeeDAO" class = "com.cimpapps.DAO.EmployeeDAOImpl">
-		<property name="jdbcTemplate" ref = "jdbcTemplate"></property>
+		<property name="jdbcTemplate" ref = "jdbcTemplate"/>
+		<property name="employee_select" value = "SELECT * FROM angajati WHERE id= ?"/>
+		<property name="employee_select_all" value = "SELECT * FROM angajati ;"/>
+		<property name="employee_insert" value = "INSERT INTO angajati( firstName, lastName, department) VALUES(?,?,?)"/>
+		<property name="employee_update" value = "UPDATE angajati SET firstName=?, lastName=?,department=? WHERE id = ?"/>
 	</bean>
 	
 </beans>
